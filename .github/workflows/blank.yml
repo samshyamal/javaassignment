@@ -26,7 +26,7 @@ jobs:
       - name: Create artifact
         run: |
          mkdir artifacts
-         cp target/javawebdemo.jar artifacts/
+         cp target/my-project-1.0.0.jar artifacts/
       
       
       - name: Create Release
