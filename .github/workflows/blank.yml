@@ -28,16 +28,7 @@ jobs:
          mkdir artifacts
          cp target/my-project-1.0.0.jar artifacts/
       
-      - name: Create Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.release }}
-        with:
-         tag_name: v1.0.0
-         release_name: Release v1.0.0
-         body: |
-         draft: false
-         prerelease: false
+      
         
         
       - name: Upload Artifact to Release
