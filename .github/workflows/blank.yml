@@ -17,3 +17,17 @@ jobs:
         run: mvn clean install
       - name: Access built artifacts
         run: ls target
+      - name: Create Release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          tag_name: v1.0.0  
+          release_name: Release v1.0.0  
+          body: |
+            Release notes for v1.0.0  # Replace with your release notes
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+         name: my-project-1.0.0.jar
+         path: ./artifacts/  
