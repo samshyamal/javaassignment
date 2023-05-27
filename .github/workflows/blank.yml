@@ -22,10 +22,9 @@ jobs:
            java-version: 11
            distribution: 'adopt'
            
-      - name: Set up Maven
-        uses: actions/setup-java@v2
-        with:
-         java-version: 11
-         maven-version: 3.8.4
+      - name: Install npm and build dependencies
+        run: |
+          sudo apt-get install -y npm
+          npm ci
 
 
