@@ -15,3 +15,7 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: mvn clean install
+      - name: Create artifact
+        run: |
+         mkdir artifacts
+         cp target/my-project.jar artifacts/
